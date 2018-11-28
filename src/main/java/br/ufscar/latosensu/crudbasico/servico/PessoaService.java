@@ -18,15 +18,15 @@ public class PessoaService {
         return (List<Pessoa>)repositorio.findAll();
     }
 
-    public Optional<Pessoa> findOne(Long id) {
-        return repositorio.findById(id);
+    public Pessoa findOne(Long id) {
+        return repositorio.findById(id).get();
     }
 
     public Pessoa save(Pessoa post) {
         return repositorio.saveAndFlush(post);
     }
 
-    public void delete(Pessoa pessoa) {
-        repositorio.delete(pessoa);
+    public void delete(Long id) {
+        repositorio.deleteById(id);
     }
 }
