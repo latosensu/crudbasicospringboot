@@ -20,8 +20,8 @@ public class PessoaController {
     @GetMapping("/")
     public ModelAndView findAll() {
 
-        ModelAndView mv = new ModelAndView("/post");
-        mv.addObject("posts", pessoaService.findAll());
+        ModelAndView mv = new ModelAndView("/pessoa");
+        mv.addObject("pessoas", pessoaService.findAll());
 
         return mv;
     }
@@ -29,8 +29,8 @@ public class PessoaController {
     @GetMapping("/add")
     public ModelAndView add(Pessoa pessoa) {
 
-        ModelAndView mv = new ModelAndView("/postAdd");
-        mv.addObject("post", pessoa);
+        ModelAndView mv = new ModelAndView("/pessoaAdd");
+        mv.addObject("pessoa", pessoa);
 
         return mv;
     }

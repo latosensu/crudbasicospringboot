@@ -9,6 +9,8 @@ import javax.persistence.*;
 @Data
 public class Pessoa {
 
+    public Pessoa(){}
+
     public Pessoa(String nome, Integer idade) {
         this.nome = nome;
         this.idade = idade;
